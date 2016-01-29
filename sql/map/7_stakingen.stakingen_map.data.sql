@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 5.5.47, for Linux (x86_64)
+--
+-- Host: localhost    Database: 7_stakingen
+-- ------------------------------------------------------
+-- Server version	5.5.47
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `stakingen_map`
+--
+
+DROP TABLE IF EXISTS `stakingen_map`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stakingen_map` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Stakingen db` varchar(92) DEFAULT NULL,
+  `Table` varchar(31) DEFAULT NULL,
+  `Type_T` varchar(20) DEFAULT NULL,
+  `Type` varchar(34) DEFAULT NULL,
+  `Value` varchar(35) DEFAULT NULL,
+  `DataType` varchar(24) DEFAULT NULL,
+  `Description` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=159 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stakingen_map`
+--
+
+LOCK TABLES `stakingen_map` WRITE;
+/*!40000 ALTER TABLE `stakingen_map` DISABLE KEYS */;
+INSERT INTO `stakingen_map` VALUES (0,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'ID','tblActiesNew','ORGANIZATION','ORIGINAL_IDENTIFIER','DEFINITION','string(255)',''),(21,'','','ORGANIZATION','Source','Strike Database IISH','string',''),(23,'',NULL,'ORGANIZATION','TYPE_ORGANIZATION','Labour Action','string(255)',''),(24,'DAG','tblActiesNew','ORGANIZATION','START_DATE','DEFINITION','string','dag+maand+jaar'),(27,'MAAND','tblActiesNew','ORGANIZATION','START_DATE','DEFINITION',NULL,NULL),(28,'JAAR','tblActiesNew','ORGANIZATION','START_DATE','DEFINITION',NULL,NULL),(29,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(30,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(31,'DURATION_DAYS','tblActiesNew','ORGANIZATION','DURATION_DAYS','DEFINITION','enum',NULL),(32,NULL,NULL,'ORGANIZATION','Timestamp','DEFINITION','string','jaar; maand;dag + duur voor einde periode'),(37,'RESULT','tblActiesNew','ORGANIZATION','RESULT','DEFINITION','string',NULL),(38,'TYPE_OUTBREAK','tblActiesNew','ORGANIZATION','TYPE_OUTBREAK','DEFINITION','string',''),(39,'TYPE_ACTION_GENERAL','tblActiesNew','ORGANIZATION','TYPE_ACTION_GENERAL','DEFINITION','string',''),(40,'TYPE_ACTION','tblActiesNew','ORGANIZATION','TYPE_ACTION','DEFINITION','string',''),(41,'ECONOMIC_SECTOR','tblActiesNew','ORGANIZATION','ECONOMIC_SECTOR','DEFINITION','string',NULL),(42,'REPORT_NL','tblActiesNew','ORGANIZATION','REPORT_NL','DEFINITION','string (very long)',NULL),(43,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(44,'STRIKERS','tblActies_Aantallen','ORGANIZATION','STRIKERS','DEFINITION','int(10)',''),(45,'DAYS_NOT_WORKED_STRIKERS','tblActies_Aantallen','ORGANIZATION','DAYS_NOT_WORKED_STRIKERS','DEFINITION','int(10)',''),(46,'INDIRECT_STRIKERS','tblActies_Aantallen','ORGANIZATION','INDIRECT_STRIKERS','DEFINITION','int(10)',''),(47,'DAYS_NOT_WORKED_INDIRECT_STRIKERS','tblActies_Aantallen','ORGANIZATION','DAYS_NOT_WORKED_INDIRECT_STRIKERS','DEFINITION','int(10)',''),(48,'CAMPAINGNERS','tblActies_Aantallen','ORGANIZATION','CAMPAINGNERS','DEFINITION','int(10)',''),(49,'LOCKED_OUT_WORKERS','tblActies_Aantallen','ORGANIZATION','LOCKED_OUT_WORKERS','DEFINITION','int(10)',''),(50,'DAYS_NOT_WORKED_LOCKED_OUT_WORKERS','tblActies_Aantallen','ORGANIZATION','DAYS_NOT_WORKED_LOCKED_OUT_WORKERS','DEFINITION','int(10)',''),(51,'LAID_OFF_WORKERS','tblActies_Aantallen','ORGANIZATION','LAID_OFF_WORKERS','DEFINITION','int(10)',''),(52,'NUMBER _COMPANIES_INVOLVED','tblActies_Aantallen','ORGANIZATION','NUMBER _COMPANIES_INVOLVED','DEFINITION','int(10)',''),(53,'NUMBER_ACTIONS','tblActies_Aantallen','ORGANIZATION','NUMBER_ACTIONS','DEFINITION','int(10)',''),(54,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(55,'OCCUPATIONAL_GROUP','tblActies_Beroep','ORGANIZATION','OCCUPATIONAL_GROUP','DEFINITION','string','meerdere records/ link naar tblBeroep'),(56,'OCCUPATIONAL_GROUP_HISCO','tblActies_Beroep','ORGANIZATION','OCCUPATIONAL_GROUP_HISCO','DEFINITION','string','meerdere records/ link naar tblBeroep'),(58,'NAME_TRADE_UNION','tblActiesNew','ORGANIZATION','NAME_TRADE_UNION','DEFINITION','string',NULL),(59,'NAME_TRADE_UNION_CENTRAL','tblActiesNew','ORGANIZATION','NAME_TRADE_UNION_CENTRAL','DEFINITION','string',NULL),(61,'ACTION_CAUSE','tblActiesNew','ORGANIZATION','ACTION_CAUSE','DEFINITION','enum','meerdere records/ link naar tblReden'),(62,'GROUP_MAIN','tblActiesNew','ORGANIZATION','GROUP_MAIN','DEFINITION','enum',''),(100,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(101,'PROVENANCE','tblActies_Bron','ORGANIZATION','PROVENANCE','DEFINITION','clob',''),(125,'','','','','','',''),(126,'','','','','','',''),(129,'','tblActies_Plaats','CONTEXT','LEVEL','DEFINITION','string','meerdere records/ link naar tblPlaats'),(130,'Locality','tblActies_Plaats','CONTEXT','LEVEL','Locality','string',''),(131,'Municipality','tblActies_Plaats','CONTEXT','LEVEL','Municipality','string',NULL),(132,'Chamber-of-Commerce','tblActies_Plaats','CONTEXT','LEVEL','Chamber-of-Commerce','string',NULL),(133,'Province','tblActies_Plaats','CONTEXT','LEVEL','Province','string',NULL),(134,NULL,'tblActies_Plaats','CONTEXT','NAME','DEFINITION','string',''),(135,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(136,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(141,NULL,'tblActies_Bedrijf','CONTEXT','LEVEL','Company_Involved',NULL,NULL),(143,'Bedrijf','tblActies_Bedrijf','CONTEXT','NAME','DEFINITION',NULL,NULL),(151,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(152,NULL,NULL,'CONTEXT_CONTEXT','RELATION','Locality and Muncipality',NULL,NULL),(154,NULL,NULL,'CONTEXT_CONTEXT','RELATION','Muncipality and Chamber-of-Commerce',NULL,NULL),(155,NULL,NULL,'CONTEXT_CONTEXT','RELATION','Muncipality and Province',NULL,NULL),(156,NULL,NULL,'CONTEXT_CONTEXT','RELATION','Company_Involved and Locality',NULL,NULL),(157,NULL,NULL,'CONTEXT_CONTEXT','RELATION','Chamber-of-Commerce and Province',NULL,NULL),(158,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `stakingen_map` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-01-29 16:31:53
