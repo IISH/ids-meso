@@ -42,7 +42,7 @@ def delete_previous( ids_db_name, Source ):
 
 25-Nov-2015	Created
 29-Jan-2016	4_zeemonster no longer used; delete from ids_meso
-29-Jan-2016	Changed
+01-Feb-2016	Changed
 """
 
 # python-future for Python 2/3 compatibility
@@ -174,8 +174,7 @@ elif db_source == "migranten":
 	map_ts_end      = [ "OphJaar" ]
 	map_ts_duration = []
 	
-#	Id_O_col      = [ "", "", "", "" ]		# IdOrg in solrimport is not unique!, do not use
-	Id_O_col      = [ "IdOrg", "IdOrg", "IdPers", "IdOrg" ]	# problem solved?
+	Id_O_col      = [ "IdOrg", "IdOrg", "IdPers", "IdOrg" ]
 	src_db_tables = [ "solrimport", "tblorganisatie", "tblpersoon", "tblkoppelpersorg" ]
 	
 	dst_offset = 5000000
